@@ -25,3 +25,4 @@ temp_plan
 temp_problem
 
 !autorace/data/eval_model/*.jsonl
+examples/ScalableTreeSearch/dart-math
