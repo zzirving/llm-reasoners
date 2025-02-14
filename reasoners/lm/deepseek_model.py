@@ -92,6 +92,8 @@ class DeepseekModel(LanguageModel):
                     stop=stop,
                 )
 
+                print(response)
+
                 return GenerateOutput(
                     text=[choice.message.content for choice in response.choices],
                     log_prob=None,

@@ -20,7 +20,7 @@ class GSM8KEvaluator(Evaluator):
 
         self.init_prompt = init_prompt
         self.output_extractor = output_extractor
-        self.answer_extractor = answer_extractor
+        self.answer_extractor = lambda x : x['answer']
         self.input_processor = lambda x: x["question"]
         self.full_dataset = datasets.load_dataset('gsm8k', 'main', split='test')
         self._dataset_name = 'gsm8k'

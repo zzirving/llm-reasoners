@@ -287,6 +287,9 @@ def validate_plan(domain, instance, lm_plan_file):
     :param lm_plan_file: plan file (saved earlier)
     """
     val_path = os.getenv("VAL")
+    # if not val_path:
+    #     raise EnvironmentError("The VAL environment variable is not set. Please set it to the path containing the validate executable.")
+    
     cmd = f"{val_path}/validate {domain} {instance} {lm_plan_file}"
     response = os.popen(cmd).read()
 
